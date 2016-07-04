@@ -1,0 +1,43 @@
+.tabbed-nav {
+  display: inline-block;
+  height: 80px;
+  margin-left: 80px;
+  padding-top: 80px;
+
+  h1 {
+    padding: 21.5px 20px;
+    @extend %normal-text;
+    color: $content-text-color;
+  }
+}
+
+.search-area {
+  background: $grey-color;
+  display: inline-block;
+  height: 80px;
+  position: absolute;
+  top: 80px;
+  width: calc(100% - 201.09px - 80px);
+  border-bottom: 1.5px solid $grey-border;
+  border-left: 1.5px solid $grey-border;
+
+  input {
+    margin-top: 20px;
+    -webkit-appearance: none;
+    margin-left: calc(100% - 420px);
+    height: 40px;
+    border: 1.5px  solid $grey-border;
+    border-radius: 5px;
+    width: 400px;
+    padding: 15px;
+    @extend %thin-text;
+  }
+}
+
+.content {
+  width: calc(100% - 80px);
+  margin-top: 44.5px;
+  margin-left: 80px;
+  padding: 0 20px;
+}
+

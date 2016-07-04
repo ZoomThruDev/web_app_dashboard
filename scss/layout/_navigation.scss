@@ -1,0 +1,36 @@
+#nav-bar {
+  width: 80px;
+  height: calc(100vh - 80px);
+  background: $nav-purple;
+  position: fixed;
+  margin-top: 80px;
+}
+
+#main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.nav-icon {
+  padding: 15px 25px;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon {
+  fill: $dimmed-icon-color;
+}
+
+.selected {
+  border-left: 3px solid $green-color;
+  padding-left: 22px;
+  .icon {
+    fill: $white;
+  }
+}

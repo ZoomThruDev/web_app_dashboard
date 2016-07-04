@@ -1,0 +1,19 @@
+#alert {
+  width: 100%;
+  background-color: $main-purple;
+  padding: 10px;
+  color: $grey-color;
+  border-radius: 3px;
+  @extend %thin-text;
+
+  & :first-of-type {
+    @extend %bold-text;
+    margin: 0 5px;
+    letter-spacing: .05em;
+    color: $white;
+  }
+
+  #close-alert {
+    float: right;
+  }
+}

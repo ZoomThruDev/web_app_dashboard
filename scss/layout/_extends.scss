@@ -1,0 +1,21 @@
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Thin Text
+%thin-text {
+  font-weight: 100;
+}
+
+%normal-text {
+  font-weight: normal;
+}
+
+%bold-text {
+  font-weight: 700;
+}
