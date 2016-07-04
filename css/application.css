@@ -102,7 +102,8 @@ h1 {
   top: 80px;
   width: calc(100% - 201.09px - 80px);
   border-bottom: 1.5px solid #dbdbdb;
-  border-left: 1.5px solid #dbdbdb; }
+  border-left: 1.5px solid #dbdbdb;
+  z-index: -1; }
   .search-area input {
     margin-top: 20px;
     -webkit-appearance: none;
