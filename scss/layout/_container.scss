@@ -18,8 +18,8 @@
   position: absolute;
   top: 80px;
   width: calc(100% - 201.09px - 80px);
-  border-bottom: 1.5px solid $grey-border;
-  border-left: 1.5px solid $grey-border;
+  border-bottom: $border-width solid $grey-border;
+  border-left: $border-width solid $grey-border;
   z-index: -1;
 
   input {
@@ -41,4 +41,3 @@
   margin-left: 80px;
   padding: 0 20px;
 }
-
