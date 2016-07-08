@@ -1,11 +1,10 @@
-#line-graph {
+.web-traffic {
   width: 100%;
   height: auto;
 }
 
 .main-graph{
   padding: 30px 0;
-  border-bottom: $border-width solid $grey-border;
 }
 
 .line-graph-nav {
@@ -17,6 +16,7 @@
     color: $content-text-color;
     margin-left: 15px;
     padding: 5px 10px;
+    @extend %pointer;
   }
 
   .line-graph-selected {
@@ -24,14 +24,5 @@
     border-radius: 20px;
     color: $white;
   }
-}
-
-.line-graph-title {
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
-  @extend %normal-text;
-  color: $content-text-color;
-  padding: 5px 10px;
 }
 

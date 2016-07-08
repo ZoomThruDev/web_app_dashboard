@@ -31,6 +31,9 @@ var webTrafficChart = new Chart(lineGraph, {
     type: "line",
     data: webTrafficData,
     options: {
+        legend: {
+            display: false
+        },
         responsive: true,
         scales: {
             yAxes: [{
@@ -62,12 +65,15 @@ var dailyTrafficData = {
             data: [50, 75, 150, 100, 200, 175, 75]
         }
     ]
-}
+};
 
 var dailyTrafficChart = new Chart(barGraph, {
     type: 'bar',
     data: dailyTrafficData,
     options: {
+        legend: {
+            display: false
+        },
         responsive: true,
         scales: {
             yAxes: [{
@@ -90,29 +96,39 @@ var dailyTrafficChart = new Chart(barGraph, {
 
 var mobileUsersData = {
     labels: [
-        "Red",
-        "Blue",
-        "Yellow"
+        "Phones",
+        "Tablets",
+        "Desktop"
     ],
     datasets: [
         {
-            data: [300, 50, 100],
+            data: [14, 16, 70],
             backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ],
-            hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#74b1bf",
+                "#81c98f",
+                'rgba(116, 119, 191, 1)'
             ]
         }]
-}
+};
 
 var mobileUsersChart = new Chart(pieChart, {
     type: 'doughnut',
-    data: mobileUsersData
+    data: mobileUsersData,
+    options: {
+        legend: {
+            display: true,
+            labels: {
+                boxWidth: 30,
+                fontSize: 15
+            }
+        },
+        responsive: true,
+        elements: {
+            arc: {
+                borderWidth: 0
+            }
+        }
+    }
 });
 
 

@@ -1,0 +1,57 @@
+.social-stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.social-media-stat {
+  margin-left: 30px;
+  align-self: center;
+  letter-spacing: .05em;
+  font-size: 1.4em;
+}
+
+.social-media {
+  width: 31.5%;   //360px
+  height: 100px;  //100px
+  background-color: $grey-color;
+  border: $border-width solid $grey-border;
+  border-radius: $border-radius;
+  margin: 0 0 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media h4 {
+  color: $main-purple;
+  display: inline-block;
+  margin: 0;
+}
+.social-media h1 {
+  @extend %thin-text;
+}
+
+#social-stats-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.circle {
+  width: $icon-size;
+  height: $icon-size;
+  background-color: $main-purple;
+  border-radius: 50%;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: calc((100px - 75px) / 2);
+}
+
+.social-media-icon {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  fill: $white;
+  padding: 8px;
+}

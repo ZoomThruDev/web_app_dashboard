@@ -3,7 +3,8 @@
   background-color: $main-purple;
   padding: 10px;
   color: $grey-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
+  margin-top: 44.5px;
   @extend %thin-text;
 
   & :first-of-type {
@@ -15,5 +16,6 @@
 
   #close-alert {
     float: right;
+    @extend %pointer;
   }
 }

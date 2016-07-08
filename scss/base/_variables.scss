@@ -4,7 +4,7 @@ $white              : #fff;
 $nav-purple         : #4d4c72;
 $dark-purple        : #5d61bf;
 $grey-color         : #fbfbfb;
-$grey-border        : #dbdbdb;
+$grey-border        : #d8d8d8;
 $content-text-color : #676666;
 $green-color        : #81c98f;
 $dimmed-icon-color  : #a6a6b9;
@@ -13,5 +13,9 @@ $dimmed-icon-color  : #a6a6b9;
 $stack-sans-serif   : Helvetica, Arial, sans-serif;
 $raleway            : 'Raleway', $stack-sans-serif;
 
-// Border width
-$border-width       : 1.75px;
+// Border
+$border-width       : .12em;
+$border-radius      : 5px;
+
+// Social media icon size
+$icon-size          : 75px;

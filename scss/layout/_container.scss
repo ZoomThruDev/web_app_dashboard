@@ -20,11 +20,11 @@
   width: calc(100% - 201.09px - 80px);
   border-bottom: $border-width solid $grey-border;
   border-left: $border-width solid $grey-border;
-  z-index: -1;
 
   input {
     margin-top: 20px;
     -webkit-appearance: none;
+    outline-color: $green-color;
     margin-left: calc(100% - 420px);
     height: 40px;
     border: 1.5px  solid $grey-border;
@@ -37,7 +37,20 @@
 
 .content {
   width: calc(100% - 80px);
-  margin-top: 44.5px;
   margin-left: 80px;
   padding: 0 20px;
+}
+
+.content-divider {
+  width: 100%;
+  border-bottom: $border-width solid $grey-border;
+}
+
+.graph-title {
+  display: inline-block;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  @extend %normal-text;
+  color: $content-text-color;
+  padding: 5px 10px;
 }

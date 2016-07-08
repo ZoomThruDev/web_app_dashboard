@@ -1,9 +1,25 @@
 .secondary-graph {
-  width: 100%;
+  width: 50%;
+  height: auto;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .daily-traffic {
-  width: 50%;
-  height: auto;
-  padding: 10px;
+  padding-right: 20px;
+}
+
+.mobile-users {
+  padding-left: 20px;
+  float: right;
+  border-left: $border-width solid $grey-border;
+}
+
+#pie-chart-legend {
+  display: inline-block;
+}
+
+#pie-chart {
+  display: inline-block;
 }

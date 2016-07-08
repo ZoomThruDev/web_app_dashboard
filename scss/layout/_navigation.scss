@@ -16,14 +16,12 @@
 .nav-icon {
   padding: 15px 25px;
   margin: 10px 0;
+  @extend %pointer;
 }
 
 .icon {
   width: 30px;
   height: 30px;
-}
-
-.icon {
   fill: $dimmed-icon-color;
 }
 
