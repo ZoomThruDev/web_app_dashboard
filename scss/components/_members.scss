@@ -1,0 +1,85 @@
+.new-members-list li:nth-of-type(1n + 2),
+.recent-activity-list li:nth-of-type(1n + 2) {
+  border-top: $border-width solid $grey-border;
+}
+
+.new-members-widget,
+.recent-activity-widget {
+  @extend %half-width;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  li {
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.new-members-widget {
+  padding-right: 20px;
+}
+
+.recent-activity-widget {
+  padding-left: 20px;
+  float: right;
+  border-left: $border-width solid $grey-border;
+}
+
+.member-title {
+  margin: 0;
+}
+
+.member-info {
+  display: inline-block;
+  margin-left: 10px;
+
+  span {
+    display: block;
+  }
+}
+
+.list-info {
+  float: right;
+  font-size: .8em;
+}
+
+.member-container {
+  display: flex;
+  align-items: center;
+  @extend %pointer;
+}
+
+.member-email,
+.activity-time {
+  font-size: .75em;
+}
+
+.member-email {
+  color: $main-purple;
+}
+
+.member-name,
+.member-activity {
+  font-size: .8em;
+}
+
+.more-info {
+  width: 15px;
+  height: 15px;
+  fill: $nav-purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+

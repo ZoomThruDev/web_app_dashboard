@@ -1,5 +1,5 @@
 .secondary-graph {
-  width: 50%;
+  @extend %half-width;
   height: auto;
   display: inline-block;
   padding-top: 30px;
