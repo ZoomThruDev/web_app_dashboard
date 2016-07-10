@@ -31,7 +31,6 @@
     -webkit-appearance: none;
     border: 1.5px  solid $grey-border;
     padding: 10px;
-    @extend %thin-text;
     background-color: $grey-color;
     margin-bottom: 15px;
   }
@@ -58,12 +57,61 @@
   margin-bottom: 15px;
 }
 
+.settings {
+  button {
+    height: 45px;
+    outline-color: $green-color;
+    border-radius: 5px;
+    font-size: .85em;
+    color: $white;
+    border: none;
+    width: 48%;
+    text-transform: uppercase;
+
+    &[type="submit"] {
+      background-color: $main-purple;
+    }
+
+    &[type="button"] {
+      float: right;
+    }
+  }
+
+  select {
+    width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    border: 1.5px  solid $grey-border;
+    padding: 10px;
+    //background-color: $grey-color;
+    outline-color: $green-color;
+    border-radius: 5px;
+    font-size: .85em;
+    background: url(../icons/down-arrow.svg) no-repeat 98% 50% $grey-color;
+    margin-bottom: 15px;
+    margin-top: 29px;
+  }
+
+  div:nth-of-type(0n + 2) .switch {
+    margin-left: 65.33px;
+  }
+}
+
+.switch {
+  margin-left: 30px;
+}
+
+.toggle-switches {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
 
 
-
-
-
+/*****************
+* Toggle sliders *
+*****************/
 
 /* The switch - the box around the slider */
 .switch {

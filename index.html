@@ -377,15 +377,34 @@
           <div class="settings">
             <h4 class="graph-title user-title">Settings</h4>
             <form>
-              <label class="switch">
-                <input type="checkbox">
-                <div class="slider round"></div>
-              </label>
+              <div class="toggle-switches">
+                <label class="toggle-label" for="email-notification">Send Email Notifications</label>
+                <label class="switch">
+                  <input type="checkbox" id="email-notification">
+                  <div class="slider round"></div>
+                </label><br>
+              </div>
 
-              <label class="switch">
-                <input type="checkbox">
-                <div class="slider round"></div>
-              </label>
+              <div class="toggle-switches">
+                <label class="toggle-label" for="public">Set Profile to Public</label>
+                <label class="switch">
+                  <input type="checkbox" id="public">
+                  <div class="slider round"></div>
+                </label><br>
+              </div>
+
+              <select name="time-zone">
+                <option value="" disabled selected>Select Timezone</option>
+                <option value="HAST">HAST</option>
+                <option value="AKST">AKST</option>
+                <option value="PST">PST</option>
+                <option value="MST">MST</option>
+                <option value="CST">CST</option>
+                <option value="EST">EST</option>
+              </select><br>
+
+              <button type="submit">Save</button>
+              <button type="button">Cancel</button>
             </form>
           </div>
         </div>
