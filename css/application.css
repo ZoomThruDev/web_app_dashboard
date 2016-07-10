@@ -45,8 +45,21 @@ h1 {
   font-size: .5em;
   position: absolute; }
 
+.notification {
+  position: relative; }
+
 #notification-bell {
-  margin: 25px 0; }
+  margin: 25px 0;
+  fill: #fff; }
+
+#notification-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #81c98f;
+  position: absolute;
+  right: 0px;
+  top: 20px; }
 
 #border {
   border-right: 1.75px solid #5d61bf;

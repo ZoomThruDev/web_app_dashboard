@@ -25,9 +25,24 @@ font-size: .5em;
 position: absolute;
 }
 
+.notification {
+  position: relative;
+}
+
 #notification-bell {
   margin: 25px 0;
   @extend %pointer;
+  fill: $white;
+}
+
+#notification-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $green-color;
+  position: absolute;
+  right: 0px;
+  top: 20px;
 }
 
 #border {

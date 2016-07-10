@@ -1,6 +1,28 @@
+// ****************
+// Graph Canvases *
+// ****************
+
 var lineGraph = document.getElementById("line-graph").getContext("2d");
 var barGraph = document.getElementById("bar-graph").getContext("2d");
 var pieChart = document.getElementById("pie-chart").getContext("2d");
+
+
+
+// *******
+// Alert *
+// *******
+
+$("#close-alert").click(function() {
+   $("#alert").hide();
+   $(".main-graph").css({
+      "padding": "50px 0"
+   });
+   $("#notification-circle").hide();
+   $("#notification-bell").css({
+       "fill": "#a6a6b9"
+   });
+});
+
 
 // ************
 // Line Graph *
