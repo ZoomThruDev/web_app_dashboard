@@ -1,3 +1,18 @@
+var $userSearch = $("#user-search");
+var $messageBody = $("#message-body");
+var $alert = $("#alert");
+var $alertMessage = $("#alert-message");
+
+var illuminateNotification = function () {
+    $("#notification-circle").show();
+    $("#notification-bell").removeClass("notification-bell-dimmed").addClass("notification-bell-illuminated");
+};
+
+var dimNotification = function () {
+    $("#notification-circle").hide();
+    $("#notification-bell").removeClass("notification-bell-illuminated").addClass("notification-bell-dimmed");
+};
+
 // ****************
 // Graph Canvases *
 // ****************
@@ -7,21 +22,112 @@ var barGraph = document.getElementById("bar-graph").getContext("2d");
 var pieChart = document.getElementById("pie-chart").getContext("2d");
 
 
+// *******************
+// Message User Form *
+// *******************
+
+var validateFormFields = function() {
+
+    var isValid = true;
+
+    if($userSearch.val() == null || $userSearch.val() == "") {
+        isValid = false;
+
+        $userSearch.css({
+            "border-color": "tomato"
+        });
+
+    } else if($messageBody.val() == null || $messageBody.val() == "") {
+        isValid = false;
+
+        $messageBody.css({
+            "border-color": "tomato"
+        });
+
+    }
+
+    return isValid;
+};
+
+var showSuccessAlert = function () {
+    $(".main-graph").css({
+        "padding": "30px 0"
+    });
+
+    $alert.show().css({
+        "background-color": "#81c98f"
+    });
+
+    illuminateNotification();
+    
+    $alertMessage.html("Your message was sent successfully!");
+};
+
+var showErrorAlert = function () {
+    $(".main-graph").css({
+        "padding": "30px 0"
+    });
+
+    $alert.show().css({
+        "background-color": "tomato"
+    });
+
+    illuminateNotification();
+
+    $alertMessage.html("Bummer! Your message was not sent. Please fill out the required fields");
+};
+
+var submitForm = function () {
+    $("body").scrollTop(0);
+
+    $userSearch.css({
+        "border-color": "#d8d8d8"
+    });
+
+    $messageBody.css({
+        "border-color": "#d8d8d8"
+    });
+
+    var isValid = validateFormFields();
+
+    if(isValid) {
+        showSuccessAlert();
+    } else {
+        showErrorAlert();
+    }
+};
+
+$("#send-message").click(function(event) {
+    event.preventDefault();
+
+    submitForm();
+});
+
+
 
 // *******
 // Alert *
 // *******
 
 $("#close-alert").click(function() {
-   $("#alert").hide();
-   $(".main-graph").css({
+    $alert.hide();
+    $(".main-graph").css({
       "padding": "50px 0"
-   });
-   $("#notification-circle").hide();
-   $("#notification-bell").css({
-       "fill": "#a6a6b9"
-   });
+    });
+    dimNotification();
 });
+
+
+
+// ****************
+// Line Graph Nav *
+// ****************
+
+$(".line-graph-nav li").on("click", function() {
+    $(this).addClass("line-graph-selected");
+    $(this).siblings().removeClass();
+});
+
 
 
 // ************
