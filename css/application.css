@@ -8,6 +8,9 @@ body {
 h1 {
   margin: 0; }
 
+a:visited {
+  fill: #a6a6b9; }
+
 #app-name span,
 #user-name, .search-area input, #alert, .social-media h1 {
   font-weight: 100; }
@@ -21,11 +24,6 @@ h1 {
 #notification-bell, .nav-icon, #alert #close-alert, .line-graph-nav li, .member-container {
   cursor: pointer; }
 
-.secondary-graph, .new-members-widget,
-.recent-activity-widget, .message-user,
-.settings {
-  width: 50%; }
-
 .app-header {
   background: #7477bf;
   width: 100%;
@@ -36,6 +34,7 @@ h1 {
   padding: 0 20px;
   color: #fff;
   position: fixed;
+  top: 0;
   z-index: 1000; }
 
 #app-name {
@@ -48,9 +47,14 @@ h1 {
 .notification {
   position: relative; }
 
-#notification-bell {
-  margin: 25px 0;
+.notification-bell-illuminated {
   fill: #fff; }
+
+#notification-bell {
+  margin: 25px 0; }
+
+.notification-bell-dimmed {
+  fill: #a6a6b9; }
 
 #notification-circle {
   width: 8px;
@@ -75,32 +79,53 @@ h1 {
   display: inline-flex; }
 
 #nav-bar {
-  width: 80px;
-  height: calc(100vh - 80px);
+  width: 100%;
+  height: 80px;
   background: #4d4c72;
-  position: fixed;
   margin-top: 80px; }
+  @media screen and (min-width: 1024px) {
+    #nav-bar {
+      width: 80px;
+      height: calc(100vh - 80px);
+      position: fixed; } }
 
 #main-nav {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-top: 10px; }
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+  justify-content: space-around; }
+  @media screen and (min-width: 1024px) {
+    #main-nav {
+      flex-direction: column;
+      width: 100%;
+      padding-top: 10px;
+      justify-content: flex-start; } }
 
 .nav-icon {
   padding: 15px 25px;
-  margin: 10px 0; }
+  margin-top: 13px;
+  fill: #a6a6b9; }
+  @media screen and (min-width: 1024px) {
+    .nav-icon {
+      margin: 10px 0; } }
 
 .icon {
   width: 30px;
-  height: 30px;
-  fill: #a6a6b9; }
+  height: 30px; }
 
 .main-nav-selected {
-  border-left: 3px solid #81c98f;
-  padding-left: 22px; }
+  border-bottom: 3px solid #81c98f;
+  margin-top: 16px;
+  padding-bottom: 12px; }
   .main-nav-selected .icon {
     fill: #fff; }
+  @media screen and (min-width: 1024px) {
+    .main-nav-selected {
+      border-bottom: none;
+      border-left: 3px solid #81c98f;
+      padding-left: 22px;
+      padding-bottom: 15px; } }
 
 .avatar {
   width: 40px;
@@ -109,20 +134,22 @@ h1 {
 
 .tabbed-nav {
   display: inline-block;
-  height: 80px;
-  margin-left: 80px;
-  padding-top: 80px; }
+  height: 80px; }
   .tabbed-nav h1 {
     padding: 21.5px 20px;
     color: #676666; }
+  @media screen and (min-width: 1024px) {
+    .tabbed-nav {
+      padding-top: 80px;
+      margin-left: 80px; } }
 
 .search-area {
   background: #fbfbfb;
   display: inline-block;
   height: 80px;
   position: absolute;
-  top: 80px;
-  width: calc(100% - 201.09px - 80px);
+  top: 160px;
+  width: calc(100% - 201.09px);
   border-bottom: 0.12em solid #d8d8d8;
   border-left: 0.12em solid #d8d8d8; }
   .search-area input {
@@ -135,11 +162,18 @@ h1 {
     border-radius: 5px;
     width: 400px;
     padding: 15px; }
+  @media screen and (min-width: 1024px) {
+    .search-area {
+      top: 80px;
+      width: calc(100% - 201.09px - 80px); } }
 
 .content {
-  width: calc(100% - 80px);
-  margin-left: 80px;
+  width: 100%;
   padding: 0 20px; }
+  @media screen and (min-width: 1024px) {
+    .content {
+      margin-left: 80px;
+      width: calc(100% - 80px); } }
 
 .content-divider {
   width: 100%;
@@ -158,13 +192,16 @@ h1 {
   padding: 10px;
   color: #fbfbfb;
   border-radius: 5px;
-  margin-top: 44.5px; }
+  margin-top: 20px; }
   #alert :first-of-type {
     margin: 0 5px;
     letter-spacing: .05em;
     color: #fff; }
   #alert #close-alert {
     float: right; }
+  @media screen and (min-width: 1024px) {
+    #alert {
+      margin-top: 44.5px; } }
 
 .web-traffic {
   width: 100%;
@@ -187,10 +224,11 @@ h1 {
     color: #fff; }
 
 .secondary-graph {
-  height: auto;
-  display: inline-block;
+  width: 50%;
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  height: auto;
+  display: inline-block; }
 
 .daily-traffic {
   padding-right: 20px; }
@@ -208,8 +246,12 @@ h1 {
 
 .social-stats {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
+  justify-content: center;
+  flex-direction: column; }
+  @media screen and (min-width: 820px) {
+    .social-stats {
+      justify-content: space-between;
+      flex-direction: row; } }
 
 .social-media-stat {
   margin-left: 30px;
@@ -218,14 +260,18 @@ h1 {
   font-size: 1.4em; }
 
 .social-media {
-  width: 31.5%;
+  width: 100%;
   height: 100px;
+  margin: 0 auto 45px;
   background-color: #fbfbfb;
   border: 0.12em solid #d8d8d8;
   border-radius: 5px;
-  margin: 0 0 45px;
   display: flex;
   justify-content: center; }
+  @media screen and (min-width: 820px) {
+    .social-media {
+      width: 31.5%;
+      margin: 0 0 45px; } }
 
 .social-media h4 {
   color: #7477bf;
@@ -260,9 +306,9 @@ h1 {
 
 .new-members-widget,
 .recent-activity-widget {
-  display: inline-block;
   padding-top: 20px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  display: inline-block; }
   .new-members-widget li,
   .recent-activity-widget li {
     padding: 14px 0;
@@ -271,12 +317,26 @@ h1 {
     justify-content: space-between; }
 
 .new-members-widget {
-  padding-right: 20px; }
+  width: 100%; }
+  @media screen and (min-width: 820px) {
+    .new-members-widget {
+      width: 45%;
+      padding-right: 20px; } }
+  @media screen and (min-width: 920px) {
+    .new-members-widget {
+      width: 50%; } }
 
 .recent-activity-widget {
-  padding-left: 20px;
-  float: right;
-  border-left: 0.12em solid #d8d8d8; }
+  width: 100%; }
+  @media screen and (min-width: 820px) {
+    .recent-activity-widget {
+      width: 55%;
+      padding-left: 20px;
+      float: right;
+      border-left: 0.12em solid #d8d8d8; } }
+  @media screen and (min-width: 920px) {
+    .recent-activity-widget {
+      width: 50%; } }
 
 .member-title {
   margin: 0; }
@@ -313,17 +373,31 @@ h1 {
 
 .message-user,
 .settings {
-  display: inline-block;
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  display: inline-block; }
 
 .settings {
-  padding-left: 20px;
-  float: right;
-  border-left: 0.12em solid #d8d8d8; }
+  width: 100%; }
+  @media screen and (min-width: 820px) {
+    .settings {
+      width: 45%;
+      padding-left: 20px;
+      float: right;
+      border-left: 0.12em solid #d8d8d8; } }
+  @media screen and (min-width: 920px) {
+    .settings {
+      width: 50%; } }
 
 .message-user {
-  padding-right: 20px; }
+  width: 100%; }
+  @media screen and (min-width: 820px) {
+    .message-user {
+      padding-right: 20px;
+      width: 55%; } }
+  @media screen and (min-width: 920px) {
+    .message-user {
+      width: 50%; } }
 
 .message-area input,
 .message-area textarea,

@@ -1,0 +1,17 @@
+@mixin mediaQueryBreakpoint($breakpoint) {
+  @if $breakpoint == "small" {
+    @media screen and (min-width: $breakpoint-small) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "medium" {
+    @media screen and (min-width: $breakpoint-medium) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "large" {
+    @media screen and (min-width: $breakpoint-large) {
+      @content;
+    }
+  }
+}

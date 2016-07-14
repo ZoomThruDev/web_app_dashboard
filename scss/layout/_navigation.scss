@@ -1,34 +1,63 @@
 #nav-bar {
-  width: 80px;
-  height: calc(100vh - 80px);
+  width: 100%;
+  height: 80px;
   background: $nav-purple;
-  position: fixed;
   margin-top: 80px;
+  //z-index: 1000;
+
+  @include mediaQueryBreakpoint(large) {
+    width: 80px;
+    height: calc(100vh - 80px);
+    position: fixed;
+  }
 }
+
+
 
 #main-nav {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-top: 10px;
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+  justify-content: space-around;
+
+  @include mediaQueryBreakpoint(large) {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: flex-start;
+  }
 }
 
 .nav-icon {
   padding: 15px 25px;
-  margin: 10px 0;
+  margin-top: 13px;
   @extend %pointer;
+  fill: $dimmed-icon-color;
+
+  @include mediaQueryBreakpoint(large) {
+    margin: 10px 0;
+  }
 }
 
 .icon {
   width: 30px;
   height: 30px;
-  fill: $dimmed-icon-color;
 }
 
+
 .main-nav-selected {
-  border-left: 3px solid $green-color;
-  padding-left: 22px;
+  border-bottom: 3px solid $green-color;
+  margin-top: 16px;
+  padding-bottom: 12px;
   .icon {
     fill: $white;
+  }
+
+  @include mediaQueryBreakpoint(large) {
+    border-bottom: none;
+    border-left: 3px solid $green-color;
+    padding-left: 22px;
+    padding-bottom: 15px;
   }
 }

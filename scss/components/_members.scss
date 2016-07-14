@@ -5,10 +5,9 @@
 
 .new-members-widget,
 .recent-activity-widget {
-  @extend %half-width;
-  display: inline-block;
   padding-top: 20px;
   padding-bottom: 10px;
+  display: inline-block;
 
   li {
     padding: 14px 0;
@@ -19,13 +18,31 @@
 }
 
 .new-members-widget {
-  padding-right: 20px;
+  width: 100%;
+
+  @include mediaQueryBreakpoint(small) {
+    width: 45%;
+    padding-right: 20px;
+  }
+
+  @include mediaQueryBreakpoint(medium) {
+    width: 50%;
+  }
 }
 
 .recent-activity-widget {
-  padding-left: 20px;
-  float: right;
-  border-left: $border-width solid $grey-border;
+  width: 100%;
+
+  @include mediaQueryBreakpoint(small) {
+    width: 55%;
+    padding-left: 20px;
+    float: right;
+    border-left: $border-width solid $grey-border;
+  }
+
+  @include mediaQueryBreakpoint(medium) {
+    width: 50%;
+  }
 }
 
 .member-title {

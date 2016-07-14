@@ -8,6 +8,7 @@
   padding: 0 20px;
   color: $white;
   position: fixed;
+  top: 0;
   z-index: 1000;
 }
 
@@ -29,10 +30,17 @@ position: absolute;
   position: relative;
 }
 
+.notification-bell-illuminated {
+  fill: $white;
+}
+
 #notification-bell {
   margin: 25px 0;
   @extend %pointer;
-  fill: $white;
+}
+
+.notification-bell-dimmed {
+  fill: #a6a6b9;
 }
 
 #notification-circle {

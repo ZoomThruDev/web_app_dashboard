@@ -1,9 +1,9 @@
 .secondary-graph {
-  @extend %half-width;
-  height: auto;
-  display: inline-block;
+  width: 50%;
   padding-top: 30px;
   padding-bottom: 30px;
+  height: auto;
+  display: inline-block;
 }
 
 .daily-traffic {

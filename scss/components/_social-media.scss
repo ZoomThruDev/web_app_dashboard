@@ -1,7 +1,12 @@
 .social-stats {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mediaQueryBreakpoint(small) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .social-media-stat {
@@ -12,14 +17,20 @@
 }
 
 .social-media {
-  width: 31.5%;
+  width: 100%;
   height: 100px;
+  margin: 0 auto 45px;
   background-color: $grey-color;
   border: $border-width solid $grey-border;
   border-radius: $border-radius;
-  margin: 0 0 45px;
+
   display: flex;
   justify-content: center;
+
+  @include mediaQueryBreakpoint(small) {
+    width: 31.5%;
+    margin: 0 0 45px;
+  }
 }
 
 .social-media h4 {

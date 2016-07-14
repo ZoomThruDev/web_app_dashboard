@@ -4,7 +4,7 @@
   padding: 10px;
   color: $grey-color;
   border-radius: $border-radius;
-  margin-top: 44.5px;
+  margin-top: 20px;
   @extend %thin-text;
 
   & :first-of-type {
@@ -17,5 +17,9 @@
   #close-alert {
     float: right;
     @extend %pointer;
+  }
+
+  @include mediaQueryBreakpoint(large) {
+    margin-top: 44.5px;
   }
 }

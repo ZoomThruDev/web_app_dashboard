@@ -7,13 +7,16 @@
 .tabbed-nav {
   display: inline-block;
   height: 80px;
-  margin-left: 80px;
-  padding-top: 80px;
 
   h1 {
     padding: 21.5px 20px;
     @extend %normal-text;
     color: $content-text-color;
+  }
+
+  @include mediaQueryBreakpoint(large) {
+    padding-top: 80px;
+    margin-left: 80px;
   }
 }
 
@@ -22,8 +25,8 @@
   display: inline-block;
   height: 80px;
   position: absolute;
-  top: 80px;
-  width: calc(100% - 201.09px - 80px);
+  top: 160px;
+  width: calc(100% - 201.09px);
   border-bottom: $border-width solid $grey-border;
   border-left: $border-width solid $grey-border;
 
@@ -39,12 +42,21 @@
     padding: 15px;
     @extend %thin-text;
   }
+
+  @include mediaQueryBreakpoint(large) {
+    top: 80px;
+    width: calc(100% - 201.09px - 80px);
+  }
 }
 
 .content {
-  width: calc(100% - 80px);
-  margin-left: 80px;
+  width: 100%;
   padding: 0 20px;
+
+  @include mediaQueryBreakpoint(large) {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
 }
 
 .content-divider {
