@@ -95,6 +95,7 @@
 
     &[type="button"] {
       float: right;
+      background-color: $grey-border;
     }
   }
 
@@ -102,6 +103,7 @@
     width: 100%;
     height: 40px;
     -webkit-appearance: none;
+    -moz-appearance: none;
     border: 1.5px  solid $grey-border;
     padding: 10px;
     //background-color: $grey-color;

@@ -1,19 +1,27 @@
 .secondary-graph {
-  width: 50%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   height: auto;
   display: inline-block;
+
+  @include mediaQueryBreakpoint(small) {
+    width: 50%;
+  }
 }
 
 .daily-traffic {
-  padding-right: 20px;
+  @include mediaQueryBreakpoint(small) {
+    padding-right: 20px;
+  }
 }
 
 .mobile-users {
-  padding-left: 20px;
-  float: right;
-  border-left: $border-width solid $grey-border;
+  @include mediaQueryBreakpoint(small) {
+    padding-left: 20px;
+    float: right;
+    border-left: $border-width solid $grey-border;
+  }
 }
 
 #pie-chart-legend {

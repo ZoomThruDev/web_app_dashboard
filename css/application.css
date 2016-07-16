@@ -156,12 +156,17 @@ a:visited {
     margin-top: 20px;
     -webkit-appearance: none;
     outline-color: #81c98f;
-    margin-left: calc(100% - 420px);
+    margin-left: calc( 20px);
     height: 40px;
     border: 1.5px solid #d8d8d8;
     border-radius: 5px;
-    width: 400px;
-    padding: 15px; }
+    width: calc(100% - 40px);
+    padding: 0 15px;
+    line-height: 1em; }
+    @media screen and (min-width: 820px) {
+      .search-area input {
+        margin-left: calc(100% - 420px);
+        width: 400px; } }
   @media screen and (min-width: 1024px) {
     .search-area {
       top: 80px;
@@ -184,7 +189,11 @@ a:visited {
   margin: 0 0 30px 0;
   text-transform: uppercase;
   color: #676666;
-  padding: 5px 10px 5px 0; }
+  padding: 5px 10px 5px 0;
+  font-size: .85em; }
+  @media screen and (min-width: 820px) {
+    .graph-title {
+      font-size: 1em; } }
 
 #alert {
   width: 100%;
@@ -192,13 +201,17 @@ a:visited {
   padding: 10px;
   color: #fbfbfb;
   border-radius: 5px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-size: .9em; }
   #alert :first-of-type {
     margin: 0 5px;
     letter-spacing: .05em;
     color: #fff; }
   #alert #close-alert {
     float: right; }
+  @media screen and (min-width: 820px) {
+    #alert {
+      font-size: 1em; } }
   @media screen and (min-width: 1024px) {
     #alert {
       margin-top: 44.5px; } }
@@ -212,31 +225,43 @@ a:visited {
 
 .line-graph-nav {
   float: right;
-  display: inline-block; }
+  display: inline-block;
+  font-size: .85em; }
   .line-graph-nav li {
     float: left;
     color: #676666;
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 5px 10px; }
+    @media screen and (min-width: 820px) {
+      .line-graph-nav li {
+        margin-left: 15px; } }
   .line-graph-nav .line-graph-selected {
     background-color: #81c98f;
     border-radius: 20px;
     color: #fff; }
+  @media screen and (min-width: 820px) {
+    .line-graph-nav {
+      font-size: 1em; } }
 
 .secondary-graph {
-  width: 50%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   height: auto;
   display: inline-block; }
+  @media screen and (min-width: 820px) {
+    .secondary-graph {
+      width: 50%; } }
 
-.daily-traffic {
-  padding-right: 20px; }
+@media screen and (min-width: 820px) {
+  .daily-traffic {
+    padding-right: 20px; } }
 
-.mobile-users {
-  padding-left: 20px;
-  float: right;
-  border-left: 0.12em solid #d8d8d8; }
+@media screen and (min-width: 820px) {
+  .mobile-users {
+    padding-left: 20px;
+    float: right;
+    border-left: 0.12em solid #d8d8d8; } }
 
 #pie-chart-legend {
   display: inline-block; }
@@ -440,11 +465,13 @@ a:visited {
   .settings button[type="submit"] {
     background-color: #7477bf; }
   .settings button[type="button"] {
-    float: right; }
+    float: right;
+    background-color: #d8d8d8; }
 .settings select {
   width: 100%;
   height: 40px;
   -webkit-appearance: none;
+  -moz-appearance: none;
   border: 1.5px solid #d8d8d8;
   padding: 10px;
   outline-color: #81c98f;

@@ -13,13 +13,44 @@ var dimNotification = function () {
     $("#notification-bell").removeClass("notification-bell-illuminated").addClass("notification-bell-dimmed");
 };
 
+
+
 // ****************
 // Graph Canvases *
 // ****************
 
-var lineGraph = document.getElementById("line-graph").getContext("2d");
+var lineGraphSm = document.getElementById("line-graph-sm").getContext("2d");
+var lineGraphLg = document.getElementById("line-graph-lg").getContext("2d");
 var barGraph = document.getElementById("bar-graph").getContext("2d");
 var pieChart = document.getElementById("pie-chart").getContext("2d");
+
+
+
+// *************
+// Media Query *
+// *************
+
+$(document).ready(function() {
+    // run test on initial page load
+    checkSize();
+
+    // run test on resize of the window
+    $(window).resize(checkSize);
+});
+
+//Function to the css rule
+var checkSize = function() {
+    if ($(".mobile-users").css("float") == "right") {
+        console.log("Hi from lg");
+        $("#line-graph-lg").hide();
+        $("#line-graph-sm").show();
+    } else {
+        console.log("Hi from sm");
+        $("#line-graph-sm").hide();
+        $("#line-graph-lg").show();
+    }
+};
+
 
 
 // *******************
@@ -30,14 +61,14 @@ var validateFormFields = function() {
 
     var isValid = true;
 
-    if($userSearch.val() == null || $userSearch.val() == "") {
+    if($userSearch.val() === null || $userSearch.val() === "") {
         isValid = false;
 
         $userSearch.css({
             "border-color": "tomato"
         });
 
-    } else if($messageBody.val() == null || $messageBody.val() == "") {
+    } else if($messageBody.val() === null || $messageBody.val() === "") {
         isValid = false;
 
         $messageBody.css({
@@ -92,6 +123,8 @@ var submitForm = function () {
 
     if(isValid) {
         showSuccessAlert();
+        $userSearch.val("");
+        $messageBody.val("");
     } else {
         showErrorAlert();
     }
@@ -140,14 +173,10 @@ var webTrafficData = {
         {
             label: "Weekly web Traffic",
             data: [0, 500, 1000, 750, 1250, 750, 1500, 1000, 1500, 2000, 1500, 2000],
-            backgroundColor: [
-                'rgba(116, 119, 191, 0.2)'
-            ],
-            borderColor: [
-                'rgba(116, 119, 191, 1)'
-            ],
-            pointBorderColor: "rgba(116, 119, 191, 1)",
-            pointBackgroundColor: "#fff",
+            backgroundColor: 'rgba(116, 119, 191, 0.2)',
+            borderColor: 'rgba(116, 119, 191, 1)',
+            pointBorderColor: 'rgba(116, 119, 191, 1)',
+            pointBackgroundColor: '#fff',
             pointRadius: 5,
             borderWidth: 1,
             lineTension: 0
@@ -155,7 +184,28 @@ var webTrafficData = {
     ]
 };
 
-var webTrafficChart = new Chart(lineGraph, {
+var webTrafficChartSm = new Chart(lineGraphSm, {
+    type: "line",
+    data: webTrafficData,
+    options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    min: 0,
+                    max: 2500,
+                    stepSize: 500
+                }
+            }]
+        }
+    }
+});
+
+var webTrafficChartLg = new Chart(lineGraphLg, {
     type: "line",
     data: webTrafficData,
     options: {

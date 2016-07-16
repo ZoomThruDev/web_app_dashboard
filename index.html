@@ -141,7 +141,8 @@
               </ul>
             </div>
             <div class="web-traffic">
-              <canvas id="line-graph" width="100" height="30"></canvas>
+              <canvas id="line-graph-sm" width="100" height="30"></canvas>
+              <canvas id="line-graph-lg" width="100" height="60"></canvas>
             </div>
           </div>
         </div>
@@ -236,7 +237,7 @@
             <ul class="new-members-list">
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-name">Dale Byrd</span>
                     <span class="member-email">dale.byrd52@example.com</span>
@@ -246,7 +247,7 @@
               </li>
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-name">Dan Oliver</span>
                     <span class="member-email">dan.oliver82@example.com</span>
@@ -256,7 +257,7 @@
               </li>
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-name">Victoria Chambers</span>
                     <span class="member-email">victoria.chambers80@example.com</span>
@@ -266,7 +267,7 @@
               </li>
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-name">Dawn Wood</span>
                     <span class="member-email">dawn.wood16@example.com</span>
@@ -282,7 +283,7 @@
             <ul class="recent-activity-list">
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-activity">Dale Byrd liked the post Facebook's Changes for 2016</span>
                     <span class="activity-time">5 hours ago</span>
@@ -302,7 +303,7 @@
 
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-activity">Dan Oliver posted YourApp's SEO Tips</span>
                     <span class="activity-time">1 day ago</span>
@@ -322,7 +323,7 @@
 
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-activity">Victoria Chambers commented on YourApp's SEO Tips</span>
                     <span class="activity-time">4 hours ago</span>
@@ -342,7 +343,7 @@
 
               <li>
                 <div class="member-container">
-                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/48.jpg" class="avatar member-avatar">
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nuraika/48.jpg" class="avatar member-avatar" alt="user profile picture">
                   <div class="member-info">
                     <span class="member-activity">Dawn Wood commented on Facebook's Changes for 2016</span>
                     <span class="activity-time">5 hours ago</span>
@@ -369,7 +370,7 @@
           <div class="message-user">
             <h4 class="graph-title user-title">Message User</h4>
             <div class="message-area">
-              <form action="" method="post" id="message-form">
+              <form action="#" method="post" id="message-form">
                 <input type="text" id="user-search" name="search-users" placeholder="Search for User">
                 <textarea id="message-body" name="message" placeholder="Message for User"></textarea>
                 <button type="submit" name="send-message" id="send-message">Send</button>
@@ -380,7 +381,7 @@
           <div class="settings">
             <h4 class="graph-title user-title">Settings</h4>
             <div class="settings-area">
-              <form action="" method="post">
+              <form action="#" method="post">
                 <div class="toggle-switches">
                   <label class="toggle-label" for="email-notification">Send Email Notifications</label>
                   <label class="switch">

@@ -10,19 +10,28 @@
 .line-graph-nav {
   float: right;
   display: inline-block;
+  font-size: .85em;
 
   li {
     float: left;
     color: $content-text-color;
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 5px 10px;
     @extend %pointer;
+
+    @include mediaQueryBreakpoint(small) {
+      margin-left: 15px;
+    }
   }
 
   .line-graph-selected {
     background-color: $green-color;
     border-radius: 20px;
     color: $white;
+  }
+
+  @include mediaQueryBreakpoint(small) {
+    font-size: 1em;
   }
 }
 

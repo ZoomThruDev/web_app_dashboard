@@ -6,6 +6,7 @@
   border-radius: $border-radius;
   margin-top: 20px;
   @extend %thin-text;
+  font-size: .9em;
 
   & :first-of-type {
     @extend %bold-text;
@@ -17,6 +18,10 @@
   #close-alert {
     float: right;
     @extend %pointer;
+  }
+
+  @include mediaQueryBreakpoint(small) {
+    font-size: 1em;
   }
 
   @include mediaQueryBreakpoint(large) {

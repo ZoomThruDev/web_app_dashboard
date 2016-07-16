@@ -34,13 +34,19 @@
     margin-top: 20px;
     -webkit-appearance: none;
     outline-color: $green-color;
-    margin-left: calc(100% - 420px);
+    margin-left: calc( 20px);
     height: 40px;
     border: 1.5px  solid $grey-border;
     border-radius: 5px;
-    width: 400px;
-    padding: 15px;
+    width: calc(100% - 40px);
+    padding: 0 15px;
     @extend %thin-text;
+    line-height: 1em;
+
+    @include mediaQueryBreakpoint(small) {
+      margin-left: calc(100% - 420px);
+      width: 400px;
+    }
   }
 
   @include mediaQueryBreakpoint(large) {
@@ -71,4 +77,9 @@
   @extend %normal-text;
   color: $content-text-color;
   padding: 5px 10px 5px 0;
+  font-size: .85em;
+
+  @include mediaQueryBreakpoint(small) {
+    font-size: 1em;
+  }
 }
