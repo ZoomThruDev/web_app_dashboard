@@ -13,7 +13,13 @@
 }
 
 #app-name {
-  margin: 21.5px 0;
+  font-size: 1.5em;
+  margin: 25.5px 0;
+
+  @include mediaQueryBreakpoint(extra-small) {
+    font-size: 2em;
+    margin: 21.5px 0;
+  }
 }
 
 #app-name span,
@@ -55,7 +61,11 @@ position: absolute;
 
 #border {
   border-right: 1.75px solid $dark-purple;
-  margin: 16px 17px;
+  margin: 16px 12px;
+
+  @include mediaQueryBreakpoint(extra-small) {
+    margin: 16px 17px;
+  }
 }
 
 .user-avatar {
@@ -63,7 +73,13 @@ position: absolute;
 }
 
 #user-name {
-  margin: 29px 0 23px 10px;
+  font-size: .9em;
+  margin: 32px 0 22px 10px;
+
+  @include mediaQueryBreakpoint(extra-small) {
+    margin: 29px 0 23px 10px;
+    font-size: 1.17em;
+  }
 }
 
 .user-info {

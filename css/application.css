@@ -38,7 +38,12 @@ a:visited {
   z-index: 1000; }
 
 #app-name {
-  margin: 21.5px 0; }
+  font-size: 1.5em;
+  margin: 25.5px 0; }
+  @media screen and (min-width: 400px) {
+    #app-name {
+      font-size: 2em;
+      margin: 21.5px 0; } }
 
 #trademark {
   font-size: .5em;
@@ -67,13 +72,21 @@ a:visited {
 
 #border {
   border-right: 1.75px solid #5d61bf;
-  margin: 16px 17px; }
+  margin: 16px 12px; }
+  @media screen and (min-width: 400px) {
+    #border {
+      margin: 16px 17px; } }
 
 .user-avatar {
   margin: 20px 0; }
 
 #user-name {
-  margin: 29px 0 23px 10px; }
+  font-size: .9em;
+  margin: 32px 0 22px 10px; }
+  @media screen and (min-width: 400px) {
+    #user-name {
+      margin: 29px 0 23px 10px;
+      font-size: 1.17em; } }
 
 .user-info {
   display: inline-flex; }
@@ -198,17 +211,21 @@ a:visited {
 #alert {
   width: 100%;
   background-color: #7477bf;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   color: #fbfbfb;
   border-radius: 5px;
   margin-top: 20px;
-  font-size: .9em; }
+  font-size: .9em;
+  position: relative; }
   #alert :first-of-type {
-    margin: 0 5px;
+    margin: 0 5px 0 0;
     letter-spacing: .05em;
     color: #fff; }
   #alert #close-alert {
-    float: right; }
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
   @media screen and (min-width: 820px) {
     #alert {
       font-size: 1em; } }
@@ -368,7 +385,9 @@ a:visited {
 
 .member-info {
   display: inline-block;
-  margin-left: 10px; }
+  margin-left: 10px;
+  padding-right: 10px;
+  position: relative; }
   .member-info span {
     display: block; }
 
@@ -391,10 +410,22 @@ a:visited {
 .member-activity {
   font-size: .8em; }
 
+.member-activity,
+.activity-time {
+  margin-left: 15px; }
+
 .more-info {
   width: 15px;
   height: 15px;
   fill: #4d4c72; }
+
+.activity-icon {
+  fill: #7477bf;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -3px;
+  left: 0px; }
 
 .message-user,
 .settings {

@@ -52,6 +52,8 @@
 .member-info {
   display: inline-block;
   margin-left: 10px;
+  padding-right: 10px;
+  position: relative;
 
   span {
     display: block;
@@ -83,10 +85,24 @@
   font-size: .8em;
 }
 
+.member-activity,
+.activity-time{
+  margin-left: 15px;
+}
+
 .more-info {
   width: 15px;
   height: 15px;
   fill: $nav-purple;
+}
+
+.activity-icon {
+  fill: $main-purple;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -3px;
+  left: 0px;
 }
 
 
